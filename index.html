@@ -727,15 +727,25 @@ afterLoad: function(i, slide) { slide.$image.attr('alt', slide.$thumb.attr('alt'
 </a>
 </div>
 </nav>
-<script xmlns:ouc="http://omniupdate.com/XSL/Variables" src="//cdn.illinoisstate.edu/js/plugins/easy-responsive-tabs/1.4/easy-responsive-tabs.min.js">// Easy Responsive Tabs //</script>
-<script xmlns:ouc="http://omniupdate.com/XSL/Variables">
-$(document).ready(function () {
-  $('.fs-tabs').easyResponsiveTabs({
-	 type: 'default', //Types: default, vertical, accordion           
-	 width: 'auto', //auto or any width like 600px
-	 fit: false,  // 100% fit in a container
-     closed: 'accordion'
+<!-- Add these before your closing </body> tag -->
+
+<!-- 1. Load jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- 2. Load the Easy Responsive Tabs plugin -->
+<script src="https://cdn.illinoisstate.edu/js/plugins/easy-responsive-tabs/1.4/easy-responsive-tabs.min.js"></script>
+
+<!-- 3. Initialize the tabs -->
+<script>
+  $(document).ready(function () {
+    $('#fs-tabs-accord').easyResponsiveTabs({
+      type: 'accordion',        // Options: 'default', 'vertical', 'accordion'
+      width: 'auto',            // auto or a fixed width like '600px'
+      fit: true,                // true = 100% fit in container
+      closed: true,             // true = start with all panels closed
+      history: false
+    });
   });
-});
 </script>
+
 <iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><div class="hidden"><a id="ou_login" href="https://a.cms.omniupdate.com/11/?skin=illinoisstate&amp;account=university&amp;site=Sandbox_Anderson_Andre&amp;action=de&amp;path=/cas-it/lizzy/profile/index.pcf" aria-label="OU Login (External)">OU Login</a><script>$('#ou_de').attr('href',$('#ou_login').attr('href'));</script></div></body></html>
